@@ -4,7 +4,17 @@ Class Reflector for Enigma
 '''
 
 class Reflector:
+    '''
+        Class Reflector for Enigma Machine
+    '''
     def __init__(self,name):
+        '''
+            Constructor for class Reflector
+            Input: Name (Type) of constructor.
+                    Can be 'A', 'B', or 'C'
+            Sets the encoding (obtained from wikipedia)
+            and wiring
+        '''
         if name == 'C':
             self.encoding = 'FVPJIAOYEDRZXWGCTKUQSBNMHL'
         elif name == 'B':
@@ -14,8 +24,13 @@ class Reflector:
         self.wiring = self.get_wiring()
 
     def get_wiring(self):
-        wiring = list(ord(i)-65 for i in self.encoding)
-        return wiring
+        '''
+            Returns entire list of wiring
+        '''
+        return list(ord(i)-65 for i in self.encoding)
 
     def forward(self,char_code):
+        '''
+            Enciphers using the reflector wiring
+        '''
         return self.wiring[char_code]
