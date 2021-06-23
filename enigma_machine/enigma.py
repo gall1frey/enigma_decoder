@@ -116,7 +116,7 @@ class Enigma:
             Input: String
             Output: String
         '''
-        in_num_list = self.to_num_list(self.only_alpha(in_str))
+        in_num_list = [self.plugboard.get_plugboard_output(i) for i in self.to_num_list(self.only_alpha(in_str))]
         out_num_list = []
         for i in in_num_list:
             out_num_list.append(self.encrypt_int(i))
@@ -127,4 +127,4 @@ class Enigma:
             Sets connections of the plugboard
         '''
         for i in plugboard_connections:
-            self.plugboard.set_connection(i[0],i[1])
+            self.plugboard.set_connection(ord(i[0])-65,ord(i[1])-65)
