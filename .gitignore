@@ -1,1 +1,2 @@
-./__pycache__/*
+__pycache__/*
+enigma_machine/enigma_run.py
