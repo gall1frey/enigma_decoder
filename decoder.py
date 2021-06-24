@@ -2,7 +2,7 @@ from metrics.metric import IOC
 from keys.keys import enigmaKey
 import sys
 import os
-sys.path.append(os.path.abspath('./enigma_machine'))
+sys.path.append(os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '.', 'enigma_machine')))
 from enigma import Enigma
 
 def floor_mod(a,b):
@@ -113,7 +113,7 @@ if __name__ == '__main__':
     ct = 'MQKPMKOEPJBIGRJZKNXXGIELJQRXMJIXDWYINNHXKEFDZXJFEQSMSMPAFCDAYVSPHEJSRZKNHBZNSXFHHKHERMIXQTUKWQDOHIVSDZWYIRYONCTMTPAKMHBIYONBRPHFPABSCKOAULPRUOMSIBNSHJKVTFAVLDDKCYIUNJGEZPFDYTOAFILUPSBMKFTGDDZVOKYKKDQDRHZGBZWBQABTYHWJQWVIAOQEHLBQSUIWNCUDWPEZFZVVJWUKRQLWXADKYEHHMGRUFAAGPYCONELNMIBVGCSKNRRDOCOWDUUPTROQKHJEOLDXQHQIYSWLMEJLTKQMFAYVYZSJAAYFJADQQJMSFODVBDJYNPIEMMZTTVACKAORJKZSQYIHETRYJCRYESUXHPXEXMPWVOYJNBEDKXRGHCLZFMNYYRREPVJFHPKSAAIGBBRABZDZXYKSCZNKAGHXNSMQJCPCVHTUIZFVZMJTQOHDZCLFLAPDKCIJMZLKRMCCHEWTYMZABCYBERZJBVCEYUQYGSHWHIMTVB'
     pt, key = decrypt(ct,3,[],3,IOC)
     print("DECRYPTED TEXT:")
-    print(decrypted)
+    print(pt)
     print("The above text was decrypted with an IOC score of",key.score)
     print("ROTORS:",key.rotors)
     print("ROTOR CONFIG:",key.pos,key.ring_settings)

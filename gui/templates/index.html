@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <div class="rotors">
+      <div class="reflector" id="ref">A</div>
+      <div class="rotor-container">
+        <div class="rotor" id="l">
+          <div class="button up" id="l_rotor_up"><div class="up-arrow"></div></div>
+          <div class="rotor-setting" id="l_rotor_pos">0</div>
+          <div class="button down" id="l_rotor_down"><div class="down-arrow"></div></div>
+        </div>
+        <div class="rot-info" id="rot-l-info"></div>
+      </div>
+      <div class="rotor-container">
+        <div class="rotor" id="m">
+          <div class="button up" id="m_rotor_up"><div class="up-arrow"></div></div>
+          <div class="rotor-setting" id="m_rotor_pos">0</div>
+          <div class="button down" id="m_rotor_down"><div class="down-arrow"></div></div>
+        </div>
+        <div class="rot-info" id="rot-m-info"></div>
+      </div>
+      <div class="rotor-container">
+        <div class="rotor" id="r">
+          <div class="button up" id="r_rotor_up"><div class="up-arrow"></div></div>
+          <div class="rotor-setting" id="r_rotor_pos">0</div>
+          <div class="button down" id="r_rotor_down"><div class="down-arrow"></div></div>
+        </div>
+        <div class="rot-info" id="rot-r-info"></div>
+      </div>
+    </div>
+    <div class="keyboard">
+      <div class="row top">
+        <div class="letter" id="Q">Q</div>
+        <div class="letter" id="W">W</div>
+        <div class="letter" id="E">E</div>
+        <div class="letter" id="R">R</div>
+        <div class="letter" id="T">T</div>
+        <div class="letter" id="Y">Y</div>
+        <div class="letter" id="U">U</div>
+        <div class="letter" id="I">I</div>
+        <div class="letter" id="O">O</div>
+        <div class="letter" id="P">P</div>
+      </div>
+      <div class="row mid">
+        <div class="letter" id="A">A</div>
+        <div class="letter" id="S">S</div>
+        <div class="letter" id="D">D</div>
+        <div class="letter" id="F">F</div>
+        <div class="letter" id="G">G</div>
+        <div class="letter" id="H">H</div>
+        <div class="letter" id="J">J</div>
+        <div class="letter" id="K">K</div>
+        <div class="letter" id="L">L</div>
+      </div>
+      <div class="row low">
+        <div class="letter" id="Z">Z</div>
+        <div class="letter" id="X">X</div>
+        <div class="letter" id="C">C</div>
+        <div class="letter" id="V">V</div>
+        <div class="letter" id="B">B</div>
+        <div class="letter" id="N">N</div>
+        <div class="letter" id="M">M</div>
+      </div>
+    </div>
+    <div class="all-rotors">
+      <div class="rotor-button" id="I">I</div>
+      <div class="rotor-button" id="II">II</div>
+      <div class="rotor-button" id="III">III</div>
+      <div class="rotor-button" id="IV">IV</div>
+      <div class="rotor-button" id="V">V</div>
+      <div class="rotor-button" id="VI">VI</div>
+      <div class="rotor-button" id="VII">VII</div>
+      <div class="rotor-button" id="VIII">VIII</div>
+    </div>
+    <script src="{{ url_for('static',filename='script.js')}}" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>

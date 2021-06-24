@@ -16,7 +16,7 @@ class Enigma:
             from_num_list, encrypt, set_plugboard
     '''
 
-    def __init__(self,rotors,reflector,rotor_positions,ring_settings,plugboard_connections):
+    def __init__(self,rotors='I II III',reflector='',rotor_positions=[0,0,0],ring_settings=[0,0,0],plugboard_connections=[]):
         '''
             Constructor for class Enigma.
             Args: rotors -> space separated string
