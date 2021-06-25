@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='stylesheet.css')}}">
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Syne+Mono&display=swap" rel="stylesheet">
     <title></title>
   </head>
   <body>
@@ -80,6 +83,13 @@
       <div class="rotor-button" id="VII">VII</div>
       <div class="rotor-button" id="VIII">VIII</div>
     </div>
+    <div class="info rotor-info">Select rotors here ----------------------------------&gt</div>
+    <div class="info keyboard-info">After you've set up the enigma, type something!<br>-----------&gt</div>
+    <div class="info reflector-info">----------&gt<br>This is the reflector. Click it to change it</div>
+    <div class="info rotor-pos-info">&lt----------<br>Click on the up and down arrows to change rotor positions<br><br>&lt----------</div>
+    <div class="info file-info">----------------------<br>This is just the cool GUI. enigma.py has the actual enigma class. This repo contains a decoder as well.<br>----------------------<br></div>
+    <div class="title">ENIGMA</div>
+    <div class="subtitle">Author: <a href="https://github.com/gall1frey" target="_blank">Gallifrey</a></div>
     <script src="{{ url_for('static',filename='script.js')}}" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>

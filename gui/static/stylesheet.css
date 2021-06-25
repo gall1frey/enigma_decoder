@@ -5,6 +5,7 @@ body, html {
   font-family: 'Syne Mono', monospace;
   max-width: 100%;
   background: #212121;
+  cursor: default;
 }
 
 .rotors {
@@ -98,7 +99,7 @@ body, html {
   flex-direction: row;
   justify-content: center;
 }
-  .keyboard .letter{
+  .keyboard .letter {
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
@@ -142,3 +143,86 @@ body, html {
   background: #fdff78;
   box-shadow: 0px 0px 18px 12px rgba(253, 255, 120,0.6);
 }
+
+.info {
+  position: fixed;
+  font-family: 'Rock Salt', cursive;
+  font-size: 1em;
+  color: white;
+  opacity: 0.3;
+  cursor: default;
+}
+  .info:hover{
+    opacity: 1;
+  }
+
+.rotor-info {
+  height: 5vh;
+  width: auto;
+  line-height: 5vh;
+  left: 5vw;
+  bottom: 8vh;
+  text-align: center;
+}
+
+.keyboard-info {
+  height: 5vh;
+  width: 15vw;
+  line-height: 5vh;
+  left: 1vw;
+  top: 50vh;
+  text-align: right;
+}
+
+.reflector-info {
+  height: 5vh;
+  width: 15vw;
+  line-height: 5vh;
+  left: 13vw;
+  top: 18vh;
+  text-align: right;
+}
+
+.rotor-pos-info {
+  height: 5vh;
+  width: 15vw;
+  line-height: 5vh;
+  right: 13vw;
+  top: 3vh;
+  text-align: left;
+}
+
+.file-info {
+  height: 5vh;
+  width: 18vw;
+  line-height: 5vh;
+  right: 2vw;
+  bottom: 40vh;
+  text-align: justify;
+}
+
+.title {
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  position: fixed;
+  top: 3vh;
+  left: 2vw;
+}
+
+.subtitle {
+  color: #ddd;
+  position: fixed;
+  top: 14vh;
+  left: 3vw;
+  height: 3em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd
+}
+  a:hover {
+    font-size: 1.5em;
+  }
