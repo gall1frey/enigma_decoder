@@ -30,7 +30,6 @@ def home():
 @app.route('/encrypt', methods=['POST'])
 def enc():
     global enigma
-    print(request.form['data'])
     if None in enigma_settings.values() or '' in enigma_settings.values():
         return 'Check your settings first!'
     return enigma.encrypt(request.form['data'])
@@ -44,11 +43,9 @@ def settings():
     enigma_settings['reflector'] = request.form['reflector']
     enigma_settings['rotor_pos'] = eval(request.form['rotor_pos'])
     enigma_settings['rotor_pos'] = [int(i) for i in enigma_settings['rotor_pos']]
-    print(enigma_settings)
     if not (None in enigma_settings.values() or '' in enigma_settings.values()):
         rotors = enigma_settings['rotor_l'] + ' ' + enigma_settings['rotor_m'] + ' ' + enigma_settings['rotor_r']
         enigma = Enigma(rotors,enigma_settings['reflector'],enigma_settings['rotor_pos'])
-        print("ENIGMA SET!")
     return 'GOOD'
 
 app.run()
