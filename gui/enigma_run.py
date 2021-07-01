@@ -1,6 +1,8 @@
 '''
-
+Author: Gallifrey (github.com/gall1frey)
+GUI for enigma machine
 '''
+
 from flask import Flask, render_template, request
 import sys
 import os

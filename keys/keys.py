@@ -1,3 +1,8 @@
+'''
+    class enigmaKey
+    Basically a fancy container to store
+    the settings of an enigma machine
+'''
 class enigmaKey:
     def __init__(self,rotors,pos,reflector,ring_settings,plugboard,score):
         self.rotors = rotors
