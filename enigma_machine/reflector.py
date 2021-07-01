@@ -1,6 +1,9 @@
 '''
 Author: Gallifrey (github.com/gall1frey)
 Class Reflector for Enigma
+This class simulates the reflector in an enigma
+machine. The Enigma class depends
+on this.
 '''
 
 class Reflector:

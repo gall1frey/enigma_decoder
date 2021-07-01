@@ -1,6 +1,9 @@
 '''
 Author: Gallifrey (github.com/gall1frey)
 Class Enigma
+This class brings together the Rotor,
+Plugboard and Reflector classes to make
+the enigma machine
 '''
 from rotor import Rotor
 from plugboard import Plugboard
@@ -31,19 +34,28 @@ class Enigma:
                   plugboard_connections -> Connections made on the plugboard_connections
                     list of tuples
         '''
+        self.rotors = rotors.split(' ')
+
+        #Creating objects of the Rotor class for the left, middle and right rotors
         self.rotor_left = Rotor()
         self.rotor_middle = Rotor()
         self.rotor_right = Rotor()
-        self.plugboard = Plugboard()
-        self.reflector = Reflector(reflector)
-        self.rotors = rotors.split(' ')
+        #set parameters of the rotors
         self.set_rotors(rotor_positions,ring_settings)
+
+        #Creating an object of the Plugboard class for the plugboard
+        self.plugboard = Plugboard()
+        #Set the plugboard
         self.set_plugboard(plugboard_connections)
+
+        #Creating an object of the Reflector class for the reflector
+        self.reflector = Reflector(reflector)
 
     def set_rotors(self,rotor_positions,ring_settings):
         '''
             Sets rotor configurations.
             Args: rotor_positions [int list], ring_settings [int list]
+            Returns: None
         '''
         self.rotor_left.create_rotor(self.rotors[0],rotor_positions[0],ring_settings[0])
         self.rotor_middle.create_rotor(self.rotors[1],rotor_positions[1],ring_settings[1])
@@ -78,6 +90,15 @@ class Enigma:
         '''
         return list(ord(i)-65 for i in in_str)
 
+    def from_num_list(self,num_list):
+        '''
+            Converts a list of numbers to string
+            (Inverse of to_num_list)
+            Input: List of numbers
+            Output: String
+        '''
+        return ''.join(chr(i+65) for i in num_list)
+
     def encrypt_int(self,in_int):
         '''
             Encrypts an integer
@@ -100,15 +121,6 @@ class Enigma:
         #Plugboard
         c7 = self.plugboard.get_plugboard_output(c7)
         return c7
-
-    def from_num_list(self,num_list):
-        '''
-            Converts a list of numbers to string
-            (Inverse of to_num_list)
-            Input: List of numbers
-            Output: String
-        '''
-        return ''.join(chr(i+65) for i in num_list)
 
     def encrypt(self,in_str):
         '''

@@ -1,6 +1,9 @@
 '''
 Author: Gallifrey (github.com/gall1frey)
 Class Rotor for Enigma
+This class simulates a rotor in an enigma
+machine. The Enigma class depends
+on this.
 '''
 
 class Rotor:

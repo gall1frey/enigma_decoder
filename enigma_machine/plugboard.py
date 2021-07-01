@@ -1,6 +1,9 @@
 '''
 Author: Gallifrey (github.com/gall1frey)
 Class Plugboard for Enigma
+This class handles the plugboard settings
+for an enigma machine. The Enigma class depends
+on this.
 '''
 
 class Plugboard:
