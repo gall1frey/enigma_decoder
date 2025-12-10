@@ -7,8 +7,9 @@ This project contains an enigma simulator, as well as a decryptor.
 2. pip3
 3. Python Modules:
     a. Flask
-    b. sys
-    c. os
+    b. flask-cors
+    c. sys
+    d. os
 ```
 ## Installation
 In case you don't have a python installation, you can install it using:
@@ -21,9 +22,9 @@ Head over to https://www.python.org/downloads/windows/ and follow the instructio
 
 The ```os``` and ```sys``` modules come along with your python installation, but you'll have to install ```Flask```. This can be done using:
 ```
-pip install flask
+pip install flask flask-cors
 or
-pip3 install flask
+pip3 install flask flask-cors
 ```
 
 Get this project by git cloning this repository using

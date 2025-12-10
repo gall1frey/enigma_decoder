@@ -4,12 +4,14 @@ GUI for enigma machine
 '''
 
 from flask import Flask, render_template, request
+from flask_cors import CORS, cross_origin
 import sys
 import os
 sys.path.append(os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'enigma_machine')))
 from enigma import Enigma
 
 app = Flask(__name__)
+CORS(app, support_credentials=True)
 app.config["DEBUG"] = True
 
 enigma = Enigma()
